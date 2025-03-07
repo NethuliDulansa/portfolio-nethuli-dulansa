@@ -15,24 +15,29 @@ import { FaReact } from "react-icons/fa";
 import { AiFillGithub, AiFillLinkedin, AiFillHtml5, AiOutlineEye } from "react-icons/ai";
 import { BiLogoGmail, BiLogoCss3, BiLogoJavascript, BiLogoRedux, BiLogoJava } from "react-icons/bi";
 import { BsFacebook, BsGit, BsPuzzle } from "react-icons/bs";
-import { TbBrandCpp } from "react-icons/tb";
-import { FaMobileAlt } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
-import { SiTypescript, SiRecoil, SiReactquery } from "react-icons/si";
+
 
 //import images
-import Ataa from '../assets/images/Ataa.png';
-import Elzero from '../assets/images/Elzero.png';
-import Kasper from '../assets/images/Kasper.png';
-import Leon from '../assets/images/Leon.png';
-import SokoNumber from '../assets/images/SokoNumber.png';
-import GlobalShare from '../assets/images/GlobalShare.png';
+import EstateApp from '../assets/images/EstateApp.png';
+import TicketCLI from '../assets/images/TicketCLI.png';
+import GUI from '../assets/images/GUI.png';
+import plane from '../assets/images/plane.png';
+import carcare from '../assets/images/carcare.png';
+import logo from '../assets/images/logo.png';
+import webapp from '../assets/images/webapp.png';
+
 
 // import style
 import style from './App.module.css';
 import clsx from 'clsx';
 
 const skills = [
+	{
+		name: 'Java',
+		icon: <BiLogoJava size="25px" color="white" />,
+		cssName: "java"
+	},
 	{
 		name: 'HTML 5',
 		icon: <AiFillHtml5 size="25px" color="white" />,
@@ -49,9 +54,9 @@ const skills = [
 		cssName: "java-script"
 	},
 	{
-		name: "TypeScript",
-		icon: <SiTypescript size="25px" color="white" />,
-		cssName: "type-script"
+		name: 'MySql',
+		icon: <BiLogoJava size="25px" color="white" />,
+		cssName: "java"
 	},
 	{
 		name: 'React',
@@ -59,44 +64,19 @@ const skills = [
 		cssName: "react"
 	},
 	{
-		name: 'Redux ToolKit',
-		icon: <BiLogoRedux size="25px" color="white" />,
-		cssName: "redux"
+		name: 'Spring  Boot',
+		icon: <BiLogoJava size="25px" color="white" />,
+		cssName: "java"
 	},
 	{
-		name: 'Redux Recoil',
-		icon: <SiRecoil size="25px" color="white" />,
-		cssName: "recoil"
-	},
-	{
-		name: 'React Query',
-		icon: <SiReactquery size="25px" color="white" />,
-		cssName: "react-query"
-	},
-	{
-		name: 'RTK Query',
-		icon: <BiLogoRedux size="25px" color="white" />,
-		cssName: "redux"
-	},
-	{
-		name: 'Responsive Design',
-		icon: <FaMobileAlt size="25px" color="white" />,
-		cssName: "responsive"
+		name: 'PHP',
+		icon: <BiLogoJava size="25px" color="white" />,
+		cssName: "java"
 	},
 	{
 		name: 'Git',
 		icon: <BsGit size="25px" color="white" />,
 		cssName: "git"
-	},
-	{
-		name: 'java',
-		icon: <BiLogoJava size="25px" color="white" />,
-		cssName: "java"
-	},
-	{
-		name: 'C++',
-		icon: <TbBrandCpp size="25px" color="white" />,
-		cssName: "cpp"
 	},
 	{
 		name: 'Problem Solving',
@@ -107,46 +87,42 @@ const skills = [
 
 const projects = [
 	{
-		name: 'Global Share',
-		link: 'https://ibrahimhiarea.github.io/Global-Share/#/home',
-		github: 'https://github.com/IbrahimHiarea/Global-Share',
-		description: 'The Global Share ERP System is an innovative web-based application designed to streamline volunteer recruitment, management, and reward systems. It incorporates task management, recruitment, and gamification features to enhance employee engagement, promote effective communication, and drive organizational excellence.',
-		image: GlobalShare
+		name: 'Car Care ++ | React.js , Nest.js',
+		link: 'https://www.carcareplusplus.lk/',
+		github: 'https://github.com/Pavith19/CarCare-Project.git',
+		description: 'A comprehensive vehicle management application that helps car owners monitor and maintain their vehicles proactively. The app integrates OBD-II diagnostics to provide real-time vehicle health insights, offers service booking for scheduled maintenance, enables dashboard sign identification to help users understand their vehicle’s warning signs, and provides a secure digital document storage system for essential car-related paperwork. Designed for efficiency and ease of use, this app simplifies vehicle management for users, ensuring optimal performance and timely servicing.',
+		image: carcare
 	},
 	{
-		name: `Ata'a`,
-		link: 'https://ibrahimhiarea.github.io/Ataa-Dashboard/',
-		github: 'https://github.com/IbrahimHiarea/Ataa-Dashboard',
-		description: "Ataa is a web application built with React for managing and organizing the operations of a charity organization. The application includes a landing page that provides an overview of the charity's mission and goals. Staff members of the charity can log in to the main dashboard, which allows them to manage and control the projects, employees, and beneficiaries associated with the charity. Additionally, there is a section dedicated to viewing the total budget of the charity, as well as the budget allocated to each individual project.",
-		image: Ataa
+		name:'Real Time Ticketing System | React.js , Spring Boot',
+		github: 'https://github.com/NethuliDulansa/Real-Time-Ticketing-System-Spring-Boot-and-React.git',
+		description: "This project is a real-time event ticketing system designed to handle concurrent ticket releases and purchases using multi-threading and synchronization techniques. The system ensures data integrity while managing multiple ticket vendors (producers) and customers (consumers) in a dynamic ticketing environment. It focuses on efficient resource management, preventing race conditions, and handling concurrent transactions smoothly.",
+		image: GUI
 	},
 	{
-		name: 'SoKo Number',
-		link: 'https://ibrahimhiarea.github.io/Soko-Number/',
-		github: 'https://github.com/IbrahimHiarea/Soko-Number',
-		description: 'Soko Number is a puzzle game built with the React framework. The game consists of 6 challenging levels that will test your problem-solving skills. Each level presents a grid-based puzzle where you need to move numbered tiles to their designated positions.',
-		image: SokoNumber
+		name: 'Ticket Management System | Java',
+		github: 'https://github.com/NethuliDulansa/-Ticket-Management-System-CLI-Java-.git',
+		description: 'A command-line-based ticketing system designed to simulate real-time ticket releases and purchases. The system follows the Producer-Consumer Pattern, where multiple vendors (producers) release tickets while multiple customers (consumers) attempt to purchase them. Using multi-threading and synchronized access, the system prevents data corruption and ensures smooth operations. This implementation focuses on efficiency, concurrency control, and seamless transaction handling without a graphical user interface.',
+		image: TicketCLI
 	},
 	{
-		name: 'Leon',
-		link: 'https://ibrahimhiarea.github.io/Leon/',
-		github: 'https://github.com/IbrahimHiarea/Leon',
-		description: 'Leon is a modern and responsive HTML and CSS design template that provides a sleek and visually appealing foundation for building stunning websites. With its clean and elegant design, Leon focuses on simplicity and exceptional user experience.',
-		image: Leon
+		name: 'Real Estate App | React.js',
+		github: 'https://github.com/NethuliDulansa/Estate-App-React.git',
+		description: 'A feature-rich real estate web application that allows users to search for properties based on various filters, such as property type, price, number of bedrooms, date added, and location (postcode). The application provides an interactive and responsive user interface for displaying property listings, saving favorites, and viewing detailed property information, including images, descriptions, and location maps. It also includes drag-and-drop functionality for managing favorite properties and ensures cross-device compatibility through responsive design techniques.',
+		image: EstateApp
 	},
 	{
-		name: 'Kasper',
-		link: 'https://ibrahimhiarea.github.io/Kasper/',
-		github: 'https://ibrahimhiarea.github.io/Kasper/',
-		description: 'Kaspar is a modern and responsive HTML and CSS design template that provides a sleek and visually appealing foundation for building stunning websites. With its clean and elegant design, Kaspar focuses on simplicity and exceptional user experience.',
-		image: Kasper
+		name: ' Plane Seat Reservation System | Java',
+		github: 'https://github.com/NethuliDulansa/Plane-Management-System.git',
+		description: 'This Java-based project is designed for a private airline company to manage and track seat reservations efficiently. The system includes functionality for seat booking, cancellation, searching for available seats, displaying seating arrangements, and managing customer details. Additionally, the project stores sold ticket details and allows ticket searches based on seat numbers. The system ensures a structured and object-oriented approach with predefined classes for handling seat assignments, pricing, and passenger information.',
+		image: plane
 	},
 	{
-		name: 'Elzero',
-		link: 'https://ibrahimhiarea.github.io/Elzero/',
-		github: 'https://github.com/IbrahimHiarea/Elzero',
-		description: 'Elzero is a stylish and interactive HTML, CSS, and JavaScript design template that offers a modern and engaging user experience. With its clean code structure and well-designed components, Elzero provides a solid foundation for building dynamic and visually appealing web applications.',
-		image: Elzero
+		name: 'Nature Nurterers| HTML ,CSS ,JavaScript ',
+		link: '',
+		github: '',
+		description: 'A group-based website focused on Life on Land, one of the UN Sustainable Development Goals (SDGs). It raises awareness about environmental sustainability with interactive features like a gallery, feedback form, user profiles, and a simulated e-commerce shop. Each team member contributed to different sections, ensuring a cohesive design and functionality',
+		image: webapp
 	},
 ]
 
@@ -177,8 +153,8 @@ function App() {
 			{/* Navbar */}
 			<div className={style.nav}>
 				<a className={style.logo}>
-					<FaReact color='var(--primary-main)' size='50px' />
-					<h5>ibrahim hiarea</h5>
+				<img src={logo} alt="Logo" width="50px" />
+					<h5>nethuli dulansa</h5>
 				</a>
 				<ul>
 					<li><a href="#Home">Home</a></li>
@@ -208,8 +184,9 @@ function App() {
 			{/* Home */}
 			<div id='Home' className={style.home}>
 				<div className={style["home-content"]}>
-					<h1>HEY, I'M Ibhrahim Hiarea</h1>
-					<p>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
+					<h1>HEY, I'M Nethuli Dulansa</h1>
+					<p>A passionate Computer Science undergraduate and intern with a strong interest in Software Engineering and Frontend Development. 
+						Eager to learn, build, and create impactful digital experiences</p>
 					<a
 						href={cv}
 						download="cv-PDF-document"
@@ -230,17 +207,14 @@ function App() {
 					</div>
 				</div>
 				<div className={style["contact-nav"]}>
-					<a className={style.github} target="_blank" href='https://github.com/IbrahimHiarea' >
+					<a className={style.github} target="_blank" href='https://github.com/NethuliDulansa/NethuliDulansa' >
 						<AiFillGithub size="30px" color='black' />
 					</a>
-					<a className={style.linkedin} target="_blank" href='https://www.linkedin.com/in/ibrahim-hiarea/' >
+					<a className={style.linkedin} target="_blank" href='https://www.linkedin.com/in/nethuli-liyanaarachchi-2702b2293/' >
 						<AiFillLinkedin size="30px" color='black' />
 					</a>
-					<a className={style.gmail} target="_blank" href="mailto:ibrahimhiarea2@gmail.com?subject=SendMail&body=Description" >
+					<a className={style.gmail} target="_blank" href="mailto:nethuli.202221140@iit.ac.lk?subject=SendMail&body=Description" >
 						<BiLogoGmail size="30px" color='black' />
-					</a>
-					<a className={style.facebook} target="_blank" href='https://www.facebook.com/ibrahim.hiarea' >
-						<BsFacebook size="30px" color='black' />
 					</a>
 				</div>
 			</div>
@@ -254,9 +228,15 @@ function App() {
 						<div className={style["about-info"]}>
 							<h3>Get to know me!</h3>
 							<p>
-								I'm a <span>Frontend Web Developer</span> building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the <span>Projects</span> section. <br /> <br />
-								I also like sharing content related to the stuff that I have learned over the years in <span>Web Development</span> so it can help other people of the Dev Community. Feel free to Connect or Follow me on my <a href="https://github.com/IbrahimHiarea" target="_blank">Github</a> where I post useful content related to Web Development and Programming. <br /> <br />
-								I'm open to <span>Job</span> opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to <span>contact</span> me.
+							I am an enthusiastic <span>Computer Science undergraduate and Intern,</span> passionate about <span> Software Engineering </span> 
+							and <span> Frontend Development</span>. I enjoy building interactive and user-friendly applications that solve real-world problems. 
+							I am always eager to learn new technologies and improve my skills.<br></br> </p>
+ 
+							
+							<br></br><p>
+							I am currently open to work and looking for opportunities where I can contribute, grow, and collaborate 
+							with like-minded professionals. Feel free to check out my projects in the portfolio section to see some of my work.
+						    If you have an exciting opportunity, don’t hesitate to reach out! 🚀
 							</p>
 						</div>
 						<div className={style["my-skill"]}>
@@ -280,7 +260,7 @@ function App() {
 			<div id='Projects' className={style.projects}>
 				<div className={style.container}>
 					<h2 className={style.title}>Projects</h2>
-					<p>Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
+					<p>Here you will find some of the personal projects that I created with each project containing its own case study</p>
 					<div className={style["projects-list"]}>
 						{
 							projects.map((project, index) => {
@@ -292,6 +272,8 @@ function App() {
 										<h3>{project.name}</h3>
 										<p>{project.description}</p>
 										<div className={style["project-buttons"]}>
+											 {/* Show Live Demo button only if the project has a live link */}
+											 {project.link && (
 											<IconButton
 												width="170px"
 												height="50px"
@@ -302,6 +284,7 @@ function App() {
 											>
 												Live Demo
 											</IconButton>
+											 )}
 											<IconButton
 												width="100px"
 												height="50px"
@@ -382,29 +365,26 @@ function App() {
 				<div className={style.container}>
 					<div className={style["footer-info"]}>
 						<div>
-							<h3>ibrahim hiarea</h3>
+							<h3>Nethuli Dulansa</h3>
 							<p>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
 						</div>
 						<div className={style.social}>
 							<h3>Social</h3>
 							<div className="">
-								<a className={style.git} target="_blank" href='https://github.com/IbrahimHiarea' >
+								<a className={style.git} target="_blank" href='https://github.com/NethuliDulansa/NethuliDulansa' >
 									<AiFillGithub size="30px" color='white' />
 								</a>
-								<a className={style.linkedin} target="_blank" href='https://www.linkedin.com/in/ibrahim-hiarea/' >
+								<a className={style.linkedin} target="_blank" href='https://www.linkedin.com/in/nethuli-liyanaarachchi-2702b2293/' >
 									<AiFillLinkedin size="30px" color='white' />
 								</a>
-								<a className={style.gmail} target="_blank" href="mailto:ibrahimhiarea2@gmail.com?subject=SendMail&body=Description" >
+								<a className={style.gmail} target="_blank" href="mailto:nethuli.202221140@iit.ac.lk?subject=SendMail&body=Description" >
 									<BiLogoGmail size="30px" color='white' />
-								</a>
-								<a className={style.facebook} target="_blank" href='https://www.facebook.com/ibrahim.hiarea' >
-									<BsFacebook size="30px" color='white' />
 								</a>
 							</div>
 						</div>
 					</div>
 					<div className={style["copy-right"]}>
-						© Copyright 2023. Made by <span>Ibrahim Hiarea</span>
+						© Copyright 2025. Made by <span>Nethuli Dulansa</span>
 					</div>
 				</div>
 			</div>

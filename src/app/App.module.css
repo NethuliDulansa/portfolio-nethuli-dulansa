@@ -36,7 +36,8 @@
     font-family: 'Allerta Stencil', sans-serif;
     font-weight: bold;
     font-size: 20px;
-    color: var(--primary-main);
+   /* color: var(--primary-main);*/
+    color:rgb(4, 48, 87);
     text-transform: uppercase;
 }
 
@@ -601,11 +602,6 @@
 .react:hover::after {
     background-color: var(--react-color);
 }
-
-.redux:hover::after {
-    background-color: var(--redux-color);
-}
-
 .git:hover::after {
     background-color: var(--git-color);
 }
@@ -641,7 +637,17 @@
 .type-script:hover::after {
     background-color: var(--type-script-color);
 }
+.mysql:hover::after {
+    background-color: #00758F; /* Example color for MySQL */
+}
 
+.php:hover::after {
+    background-color: #777BB4; /* Example color for PHP */
+}
+
+.spring-boot:hover::after {
+    background-color: #6DB33F; /* Example color for Spring Boot */
+}
 @media (max-width: 768px) {
     .about-content {
         grid-template-columns: 1fr;
@@ -723,7 +729,7 @@
     }
 
     .project-image>img {
-        width: 400px;
+        width: 200px;
         height: 300px;
     }
 
