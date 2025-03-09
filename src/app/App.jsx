@@ -184,7 +184,7 @@ function App() {
 			{/* Home */}
 			<div id='Home' className={style.home}>
 				<div className={style["home-content"]}>
-					<h1>HEY, I'M Nethuli Dulansa</h1>
+					<h1>HEY, I'M Nethuli Dulansa Liyanaarachchi</h1>
 					<p>A passionate Computer Science undergraduate and intern with a strong interest in Software Engineering and Frontend Development. 
 						Eager to learn, build, and create impactful digital experiences</p>
 					<a
