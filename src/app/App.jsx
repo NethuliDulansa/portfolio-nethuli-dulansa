@@ -13,8 +13,8 @@ import cv from '../assets/files/cv.pdf';
 // import icons
 import { FaReact } from "react-icons/fa";
 import { AiFillGithub, AiFillLinkedin, AiFillHtml5, AiOutlineEye } from "react-icons/ai";
-import { BiLogoGmail, BiLogoCss3, BiLogoJavascript, BiLogoRedux, BiLogoJava } from "react-icons/bi";
-import { BsFacebook, BsGit, BsPuzzle } from "react-icons/bs";
+import { BiLogoGmail, BiLogoCss3, BiLogoJavascript,  BiLogoJava } from "react-icons/bi";
+import { BsGit, BsPuzzle } from "react-icons/bs";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 
@@ -120,7 +120,7 @@ const projects = [
 	{
 		name: 'Nature Nurterers| HTML ,CSS ,JavaScript ',
 		link: '',
-		github: '',
+		github: 'https://github.com/Pavith19/CarCare-Project.git',
 		description: 'A group-based website focused on Life on Land, one of the UN Sustainable Development Goals (SDGs). It raises awareness about environmental sustainability with interactive features like a gallery, feedback form, user profiles, and a simulated e-commerce shop. Each team member contributed to different sections, ensuring a cohesive design and functionality',
 		image: webapp
 	},
