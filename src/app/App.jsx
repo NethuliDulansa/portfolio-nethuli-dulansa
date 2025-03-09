@@ -8,7 +8,7 @@ import InputField from '../common/components/InputField/InputField';
 import TextAreaField from '../common/components/TextAreaField/TextAreaField';
 import SubmitButton from '../common/components/SubmitButton/SubmitButton';
 import Loader from '../common/components/Loader/Loader';
-import cv from '../assets/files/nethuli_liyanaarachchi_cv.pdf';
+import cv from '../assets/files/cv_nethuli_liyanaarachchi.pdf';
 
 // import icons
 import { FaReact } from "react-icons/fa";
@@ -189,7 +189,7 @@ function App() {
 						Eager to learn, build, and create impactful digital experiences</p>
 					<a
 						href={cv}
-						download="nethuli_liyanaarachchi_cv"
+						download="cv_nethuli_liyanaarachchi"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
